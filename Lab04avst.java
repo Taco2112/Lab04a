@@ -2,36 +2,59 @@
 // The Mortgage Payment Program
 // This the student, starting version of the Lab04a assignment.
 
+import java.util.*;
 
 public class Lab04avst
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Lab04a, Student Version\n");
+		//System.out.println("Lab04a, Student Version\n");
 
-	//	double principal  = 250000;
-	//	double annualRate = 4.85;
-	//	double numYears   = 30;
+			//double principal  = 250000;
+			//double annualRate = 4.85;
+			//double numYears   = 30;
 
-
-		double principle = 250000.0;
-		double anual = 0.0485;
-		double numYears = 30;
-
-		double
+	  Scanner console = new Scanner(System.in);
 
 
+	        System.out.println("Lab04a, Student Version 80 point version ");
+	       // System.out.print("principle:    "+  (double loan););
 
-		System.out.println(principle);
-		System.out.println(anual * 100);
+	        double loan = 250000;
+	          System.out.println("principle:     " + (double) loan);
+	        //System.out.print("Number of Years:  "+ (int years););
+
+	        int years = 30;
+	           System.out.println("Number of Years:  " + (int) years);
+	    //    System.out.print("anual rate:   "+ (double rate););
+
+	        double rate = 4.85;
+	        System.out.println("anual rate:       " + (double) rate);
+	        System.out.println();
+
+	        // compute the data we need to complete the problems we have
+
+	        int numberof = 12 * years;
+	        double calculations = rate / 12.0 / 100.0;
+	        double payment = loan * calculations * Math.pow(1 + calculations, numberof) /
+	                         (Math.pow(1 + calculations, numberof) - 1);
+	        System.out.println("Monthly of Payment = $" + (int) payment);
+
+// below i [attempt] to do 90
+
+
+//the payments are below and are belived to be alright ?
+					double calculations21 = 12 * (double)payment;
+					double calculations22 = (double)calculations21 * 30;
+					System.out.println("Total Payments:		" + (double) calculations22);
+
+//below is the total intrest wich is belived to be not rigght...
+					double calculations2 = 1 +  (double)rate * (int)calculations22;
+					double calculations3 = (int)payment * (double)calculations22;
+					System.out.println("Toytal Intrest:		"  + (double) calculations3);
 
 
 
-
-
-
-
-
-		System.out.println();
+			//System.out.println();
 	}
 }
