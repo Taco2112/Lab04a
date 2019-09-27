@@ -1,7 +1,7 @@
 // Lab04avst.java
 // The Mortgage Payment Program
 // This the student, starting version of the Lab04a assignment.
-
+// all code commented was for experimental purposes only
 import java.util.*;
 
 public class Lab04avst
@@ -33,7 +33,7 @@ public class Lab04avst
 	        System.out.println();
 
 	        // compute the data we need to complete the problems we have
-
+//side note : MATH.POW is 📋 returns the value of the first argument raised to the power of the second argument.
 	        int numberof = 12 * years;
 	        double calculations = rate / 12.0 / 100.0;
 	        double payment = loan * calculations * Math.pow(1 + calculations, numberof) /
@@ -43,14 +43,14 @@ public class Lab04avst
 // below i [attempt] to do 90
 
 
-//the payments are below and are belived to be alright ?
+//the payments are below and are belived to be alright ?😅
 					double calculations21 = 12 * (double)payment;
 					double calculations22 = (double)calculations21 * 30;
 					System.out.println("Total Payments:		" + (double) calculations22);
 
-//below is the total intrest wich is belived to be not rigght...
-					double calculations2 = 1 +  (double)rate * (int)calculations22;
-					double calculations3 = (int)payment * (double)calculations22;
+//below is the total intrest wich is belived to be not rigght... 85? 😬
+					double calculations2 = 1 +  (double)rate * (int)years;
+					double calculations3 = (int)payment * (double)calculations2;
 					System.out.println("Toytal Intrest:		"  + (double) calculations3);
 
 
